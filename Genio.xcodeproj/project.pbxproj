@@ -11,11 +11,12 @@
 		49BA0B0B2047950300C09FA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B0A2047950300C09FA9 /* ViewController.swift */; };
 		49BA0B0E2047950300C09FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B0C2047950300C09FA9 /* Main.storyboard */; };
 		49BA0B112047950300C09FA9 /* Genio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B0F2047950300C09FA9 /* Genio.xcdatamodeld */; };
-		49BA0B132047950300C09FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B122047950300C09FA9 /* Assets.xcassets */; };
 		49BA0B162047950300C09FA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B142047950300C09FA9 /* LaunchScreen.storyboard */; };
 		49BA0B212047950300C09FA9 /* GenioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B202047950300C09FA9 /* GenioTests.swift */; };
 		49BA0B2C2047950300C09FA9 /* GenioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B2B2047950300C09FA9 /* GenioUITests.swift */; };
 		49BA0B3B204798EE00C09FA9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B3A204798EE00C09FA9 /* Login.swift */; };
+		7185E4252050D8E800D43B33 /* ClassExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185E4242050D8E800D43B33 /* ClassExtentions.swift */; };
+		7185E4272050DDBD00D43B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7185E4262050DDBC00D43B33 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 		49BA0B0A2047950300C09FA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49BA0B0D2047950300C09FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49BA0B102047950300C09FA9 /* Genio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Genio.xcdatamodel; sourceTree = "<group>"; };
-		49BA0B122047950300C09FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BA0B152047950300C09FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BA0B172047950300C09FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49BA0B1C2047950300C09FA9 /* GenioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +53,8 @@
 		49BA0B3A204798EE00C09FA9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		49BA0B3C2047A85900C09FA9 /* Brandon_bld.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld.otf; sourceTree = "<group>"; };
 		49BA0B3D2047A85900C09FA9 /* Brandon_reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg.otf; sourceTree = "<group>"; };
+		7185E4242050D8E800D43B33 /* ClassExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExtentions.swift; sourceTree = "<group>"; };
+		7185E4262050DDBC00D43B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +108,11 @@
 				49BA0B3C2047A85900C09FA9 /* Brandon_bld.otf */,
 				49BA0B3D2047A85900C09FA9 /* Brandon_reg.otf */,
 				49BA0B082047950300C09FA9 /* AppDelegate.swift */,
+				7185E4242050D8E800D43B33 /* ClassExtentions.swift */,
 				49BA0B0A2047950300C09FA9 /* ViewController.swift */,
 				49BA0B39204798CE00C09FA9 /* Login-Signup */,
 				49BA0B0C2047950300C09FA9 /* Main.storyboard */,
-				49BA0B122047950300C09FA9 /* Assets.xcassets */,
+				7185E4262050DDBC00D43B33 /* Assets.xcassets */,
 				49BA0B142047950300C09FA9 /* LaunchScreen.storyboard */,
 				49BA0B172047950300C09FA9 /* Info.plist */,
 				49BA0B0F2047950300C09FA9 /* Genio.xcdatamodeld */,
@@ -251,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BA0B162047950300C09FA9 /* LaunchScreen.storyboard in Resources */,
-				49BA0B132047950300C09FA9 /* Assets.xcassets in Resources */,
+				7185E4272050DDBD00D43B33 /* Assets.xcassets in Resources */,
 				49BA0B0E2047950300C09FA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +282,7 @@
 			files = (
 				49BA0B112047950300C09FA9 /* Genio.xcdatamodeld in Sources */,
 				49BA0B0B2047950300C09FA9 /* ViewController.swift in Sources */,
+				7185E4252050D8E800D43B33 /* ClassExtentions.swift in Sources */,
 				49BA0B092047950300C09FA9 /* AppDelegate.swift in Sources */,
 				49BA0B3B204798EE00C09FA9 /* Login.swift in Sources */,
 			);

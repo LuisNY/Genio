@@ -17,6 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //http://ec2-52-59-44-148.eu-central-1.compute.amazonaws.com/
+        //http://ec2-35-156-89-219.eu-central-1.compute.amazonaws.com
+        //http://mw-knip.rhcloud.com/
+        //http://ec2-52-59-44-148.eu-central-1.compute.amazonaws.com/
+        
+        UserDefaults.standard.setValue("http://ec2-18-196-61-239.eu-central-1.compute.amazonaws.com/", forKey: "myURL")
+        UserDefaults.standard.set(UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0), forKey: "backColor")
+        UserDefaults.standard.set(UIColor(red: 34/255, green: 121/255, blue: 172/255, alpha: 1.0), forKey: "labelsColor")
+        UserDefaults.standard.set(UIColor(red: 99/255, green: 180/255, blue: 243/255, alpha: 1.0), forKey: "textColor")
+        
+        UITabBar.appearance().tintColor = UIColor(red: 34/255, green: 121/255, blue: 172/255, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor(red: 34/255, green: 121/255, blue: 172/255, alpha: 1.0)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(red: 99/255, green: 180/255, blue: 243/255, alpha: 1.0)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(red: 34/255, green: 121/255, blue: 172/255, alpha: 1.0)], for: .selected)
+        
         return true
     }
 
