@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		496B2B3220544FA0005F5130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496B2B3120544FA0005F5130 /* Assets.xcassets */; };
+		496B2B33205461DF005F5130 /* Brandon_bld.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B3C2047A85900C09FA9 /* Brandon_bld.otf */; };
+		496B2B34205461E2005F5130 /* Brandon_bld.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B3C2047A85900C09FA9 /* Brandon_bld.otf */; };
+		496B2B35205461E3005F5130 /* Brandon_bld.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B3C2047A85900C09FA9 /* Brandon_bld.otf */; };
+		496B2B36205461E7005F5130 /* Brandon_reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B3D2047A85900C09FA9 /* Brandon_reg.otf */; };
+		496B2B37205461E7005F5130 /* Brandon_reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B3D2047A85900C09FA9 /* Brandon_reg.otf */; };
+		496B2B38205461E8005F5130 /* Brandon_reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B3D2047A85900C09FA9 /* Brandon_reg.otf */; };
 		49BA0B092047950300C09FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B082047950300C09FA9 /* AppDelegate.swift */; };
 		49BA0B0B2047950300C09FA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B0A2047950300C09FA9 /* ViewController.swift */; };
 		49BA0B0E2047950300C09FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BA0B0C2047950300C09FA9 /* Main.storyboard */; };
@@ -16,7 +23,6 @@
 		49BA0B2C2047950300C09FA9 /* GenioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B2B2047950300C09FA9 /* GenioUITests.swift */; };
 		49BA0B3B204798EE00C09FA9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA0B3A204798EE00C09FA9 /* Login.swift */; };
 		7185E4252050D8E800D43B33 /* ClassExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185E4242050D8E800D43B33 /* ClassExtentions.swift */; };
-		7185E4272050DDBD00D43B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7185E4262050DDBC00D43B33 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		496B2B3120544FA0005F5130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BA0B052047950300C09FA9 /* Genio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BA0B082047950300C09FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BA0B0A2047950300C09FA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +61,6 @@
 		49BA0B3C2047A85900C09FA9 /* Brandon_bld.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld.otf; sourceTree = "<group>"; };
 		49BA0B3D2047A85900C09FA9 /* Brandon_reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg.otf; sourceTree = "<group>"; };
 		7185E4242050D8E800D43B33 /* ClassExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExtentions.swift; sourceTree = "<group>"; };
-		7185E4262050DDBC00D43B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +118,7 @@
 				49BA0B0A2047950300C09FA9 /* ViewController.swift */,
 				49BA0B39204798CE00C09FA9 /* Login-Signup */,
 				49BA0B0C2047950300C09FA9 /* Main.storyboard */,
-				7185E4262050DDBC00D43B33 /* Assets.xcassets */,
+				496B2B3120544FA0005F5130 /* Assets.xcassets */,
 				49BA0B142047950300C09FA9 /* LaunchScreen.storyboard */,
 				49BA0B172047950300C09FA9 /* Info.plist */,
 				49BA0B0F2047950300C09FA9 /* Genio.xcdatamodeld */,
@@ -253,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496B2B36205461E7005F5130 /* Brandon_reg.otf in Resources */,
 				49BA0B162047950300C09FA9 /* LaunchScreen.storyboard in Resources */,
-				7185E4272050DDBD00D43B33 /* Assets.xcassets in Resources */,
+				496B2B3220544FA0005F5130 /* Assets.xcassets in Resources */,
 				49BA0B0E2047950300C09FA9 /* Main.storyboard in Resources */,
+				496B2B33205461DF005F5130 /* Brandon_bld.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496B2B34205461E2005F5130 /* Brandon_bld.otf in Resources */,
+				496B2B37205461E7005F5130 /* Brandon_reg.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +280,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496B2B35205461E3005F5130 /* Brandon_bld.otf in Resources */,
+				496B2B38205461E8005F5130 /* Brandon_reg.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

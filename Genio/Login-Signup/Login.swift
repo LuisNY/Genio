@@ -35,12 +35,15 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
         // Do any additional setup after loading the view, typically from a nib.
         
         self.view.backgroundColor = labels_color_
-        let tap_view: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        self.view.addGestureRecognizer(tap_view)
-        
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: text_color_!], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: labels_color_!], for: .selected)
-        
+        setupLogo()
+        setupBottomStack()
+        setUpinputFields()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     func setupLogo(){
@@ -65,30 +68,20 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     func setUpinputFields() {
         
         self.email_text_field_.delegate = self
-        self.email_text_field_.backgroundColor = UIColor.white
         self.email_text_field_.setLeftPaddingPoints(10)
         self.email_text_field_.setRightPaddingPoints(10)
-        /*self.email_text_field_.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: text_color!, NSFontAttributeName :UIFont(name: "BrandonGrotesque-Regular", size: 18)!])
-        self.email_text_field_.font = UIFont(name: "BrandonGrotesque-Regular", size: 18)*/
-        self.email_text_field_.contentVerticalAlignment = UIControlContentVerticalAlignment.center
-        self.email_text_field_.textColor = text_color_!
-        self.email_text_field_.layer.cornerRadius = ((main_stack_height_.constant - (self.main_stack_.spacing * 2)) / 3) //12.0
-        self.email_text_field_.layer.borderWidth = 1.0
+        self.email_text_field_.layer.cornerRadius = ((main_stack_height_.constant - (self.main_stack_.spacing * 2)) / 3) / 2 
         self.email_text_field_.layer.borderColor = UIColor.white.cgColor
         
         self.psw_text_field_.delegate = self
-        self.psw_text_field_.backgroundColor = UIColor.white
         self.psw_text_field_.setLeftPaddingPoints(10)
         self.psw_text_field_.setRightPaddingPoints(10)
-        self.psw_text_field_.contentVerticalAlignment = UIControlContentVerticalAlignment.center
-        /*self.psw_text_field_.attributedPlaceholder = NSAttributedString(string:"Password", attributes:[NSForegroundColorAttributeName: text_color!, NSFontAttributeName :UIFont(name: "BrandonGrotesque-Regular", size: 18)!])
-        self.psw_text_field_.font = UIFont(name: "BrandonGrotesque-Regular", size: 18)*/
-        self.psw_text_field_.contentVerticalAlignment = UIControlContentVerticalAlignment.center
-        //self.psw_text_field_.textColor = textColor
-        self.psw_text_field_.layer.cornerRadius = ((main_stack_height_.constant - (self.main_stack_.spacing * 2)) / 3) 
-        self.psw_text_field_.layer.borderWidth = 1.0
+        
+        self.psw_text_field_.layer.cornerRadius = ((main_stack_height_.constant - (self.main_stack_.spacing * 2)) / 3) / 2
         self.psw_text_field_.layer.borderColor = UIColor.white.cgColor
         
+        
+        self.activity_indicator_.stopAnimating()
         self.activity_indicator_.hidesWhenStopped = true
         
         
@@ -100,17 +93,19 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     
     @IBAction func loginAction(_ sender: UIButton) {
         
-        
+         print("login")
         
         
     }
     
     @IBAction func signupAction(_ sender: UIButton) {
-        
+        print("sign up")
         
     }
     
     func dismissKeyboard() {
+        self.email_text_field_.resignFirstResponder()
+        self.psw_text_field_.resignFirstResponder()
         view.endEditing(true)
     }
     

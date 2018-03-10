@@ -24,24 +24,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-genio" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-Vo-pKy" userLabel="logo_">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-genio" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-Vo-pKy" userLabel="logo_">
                                 <rect key="frame" x="41.333333333333343" y="39.999999999999986" width="331.33333333333326" height="220.66666666666663"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-PO-4kE" userLabel="main_stack_">
                                 <rect key="frame" x="41.333333333333343" y="476" width="331.33333333333326" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="218" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-SJ-NI0" userLabel="emailTextField">
+                                    <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="218" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-SJ-NI0" userLabel="emailTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="33.333333333333336"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.55000000000000004"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM0-Yb-6eM" userLabel="pswTextField">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM0-Yb-6eM" userLabel="pswTextField">
                                         <rect key="frame" x="0.0" y="73.333333333333371" width="331.33333333333331" height="33.333333333333343"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3Hj-OL-0QV" userLabel="ButtonsStack">
                                         <rect key="frame" x="0.0" y="146.66666666666663" width="331.33333333333331" height="33.333333333333343"/>
@@ -50,7 +70,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
                                                 <state key="normal" title="LOGIN">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
@@ -63,7 +83,7 @@
                                                 <rect key="frame" x="165.66666666666669" y="0.0" width="165.66666666666669" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
                                                 <state key="normal" title="SIGNUP">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
@@ -83,8 +103,17 @@
                                 </constraints>
                                 <variation key="heightClass=regular-widthClass=regular" spacing="60"/>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="120-fz-c1e">
-                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="120-fz-c1e">
+                                <rect key="frame" x="187" y="298" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TPf-AI-Mwp">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="40" id="lkd-tM-dRR">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -97,7 +126,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                             </constraint>
                             <constraint firstItem="Iqf-Vo-pKy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ULt-he-pLO"/>
-                            <constraint firstItem="120-fz-c1e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vxo-Qq-4tA"/>
+                            <constraint firstItem="120-fz-c1e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="Vxo-Qq-4tA"/>
                             <constraint firstItem="6Z5-PO-4kE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bBQ-h0-e8a"/>
                             <constraint firstItem="Iqf-Vo-pKy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" constant="100" id="pBD-hc-tUN">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
