@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,90 +21,95 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="LoginViewController" customClass="LoginViewController" customModule="Genio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-genio" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-Vo-pKy" userLabel="logo_">
-                                <rect key="frame" x="41.333333333333343" y="39.999999999999986" width="331.33333333333326" height="220.66666666666663"/>
+                                <rect key="frame" x="37.666666666666657" y="63.999999999999986" width="300" height="243.66666666666663"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-PO-4kE" userLabel="main_stack_">
-                                <rect key="frame" x="41.333333333333343" y="476" width="331.33333333333326" height="180"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fex-hT-lBF">
+                                <rect key="frame" x="37.666666666666657" y="454.33333333333331" width="300" height="243.66666666666669"/>
                                 <subviews>
-                                    <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="218" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-SJ-NI0" userLabel="emailTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="33.333333333333336"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.55000000000000004"/>
-                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM0-Yb-6eM" userLabel="pswTextField">
-                                        <rect key="frame" x="0.0" y="73.333333333333371" width="331.33333333333331" height="33.333333333333343"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3Hj-OL-0QV" userLabel="ButtonsStack">
-                                        <rect key="frame" x="0.0" y="146.66666666666663" width="331.33333333333331" height="33.333333333333343"/>
+                                    <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-PO-4kE" userLabel="main_stack_">
+                                        <rect key="frame" x="0.0" y="60.000000000000043" width="300.66666666666669" height="183.66666666666663"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-RT-Um3" userLabel="login button">
-                                                <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="33.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
-                                                <state key="normal" title="LOGIN">
-                                                    <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
-                                                </variation>
-                                                <connections>
-                                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wtL-87-jxA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbd-1Q-WoQ">
-                                                <rect key="frame" x="165.66666666666669" y="0.0" width="165.66666666666669" height="33.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
-                                                <state key="normal" title="SIGNUP">
-                                                    <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
-                                                </variation>
-                                                <connections>
-                                                    <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Mf-vx-ZhQ"/>
-                                                </connections>
-                                            </button>
+                                            <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="218" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-SJ-NI0" userLabel="emailTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="300.66666666666669" height="34.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.55000000000000004"/>
+                                                <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM0-Yb-6eM" userLabel="pswTextField">
+                                                <rect key="frame" x="0.0" y="74.666666666666629" width="300.66666666666669" height="34.333333333333343"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3Hj-OL-0QV" userLabel="ButtonsStack">
+                                                <rect key="frame" x="0.0" y="149" width="300.66666666666669" height="34.666666666666657"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-RT-Um3" userLabel="login button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150.33333333333334" height="34.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
+                                                        <state key="normal" title="LOGIN">
+                                                            <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wtL-87-jxA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbd-1Q-WoQ">
+                                                        <rect key="frame" x="150.33333333333331" y="0.0" width="150.33333333333331" height="34.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
+                                                        <state key="normal" title="SIGNUP">
+                                                            <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Mf-vx-ZhQ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="60"/>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="Gmq-fK-xfJ">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
-                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="6Z5-PO-4kE" secondAttribute="trailing" id="EqX-U8-7xN"/>
+                                    <constraint firstItem="6Z5-PO-4kE" firstAttribute="leading" secondItem="fex-hT-lBF" secondAttribute="leading" id="G6F-bn-lTe"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Z5-PO-4kE" secondAttribute="bottom" id="wAA-7k-TPu"/>
+                                    <constraint firstItem="6Z5-PO-4kE" firstAttribute="top" secondItem="fex-hT-lBF" secondAttribute="top" constant="60" id="zf4-cE-zBg"/>
                                 </constraints>
-                                <variation key="heightClass=regular-widthClass=regular" spacing="60"/>
-                            </stackView>
+                            </view>
                             <activityIndicatorView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="120-fz-c1e">
-                                <rect key="frame" x="187" y="298" width="40" height="40"/>
+                                <rect key="frame" x="167.66666666666666" y="336" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="TPf-AI-Mwp">
                                         <variation key="heightClass=regular-widthClass=regular" constant="100"/>
@@ -116,18 +121,19 @@
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Z5-PO-4kE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="Ah0-YB-IBY"/>
+                            <constraint firstItem="fex-hT-lBF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="5cj-0x-tWZ"/>
+                            <constraint firstItem="fex-hT-lBF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="CKG-2h-xCx"/>
                             <constraint firstItem="Iqf-Vo-pKy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HdQ-gS-fxq">
                                 <variation key="heightClass=regular-widthClass=regular" constant="80"/>
                             </constraint>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Z5-PO-4kE" secondAttribute="bottom" constant="80" id="LtB-pT-RIA">
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fex-hT-lBF" secondAttribute="bottom" constant="80" id="IXf-e0-0rh">
                                 <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                             </constraint>
                             <constraint firstItem="Iqf-Vo-pKy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ULt-he-pLO"/>
                             <constraint firstItem="120-fz-c1e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="Vxo-Qq-4tA"/>
-                            <constraint firstItem="6Z5-PO-4kE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bBQ-h0-e8a"/>
+                            <constraint firstItem="fex-hT-lBF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XGD-XE-L3R"/>
                             <constraint firstItem="Iqf-Vo-pKy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" constant="100" id="pBD-hc-tUN">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -141,11 +147,14 @@
                         <outlet property="email_text_field_" destination="Esr-SJ-NI0" id="5tF-KG-uEm"/>
                         <outlet property="login_button_" destination="b6y-RT-Um3" id="jLc-wj-yah"/>
                         <outlet property="logo_" destination="Iqf-Vo-pKy" id="tg3-gT-JFq"/>
+                        <outlet property="logo_top_const_" destination="HdQ-gS-fxq" id="wrR-PU-ntT"/>
                         <outlet property="main_stack_" destination="6Z5-PO-4kE" id="IVE-do-exa"/>
-                        <outlet property="main_stack_bottom_const_" destination="LtB-pT-RIA" id="QQR-n3-4Rp"/>
-                        <outlet property="main_stack_height_" destination="Gmq-fK-xfJ" id="bfQ-3Y-qXC"/>
+                        <outlet property="main_stack_bottom_const_" destination="IXf-e0-0rh" id="rVk-YJ-Mar"/>
+                        <outlet property="main_stack_height_" destination="CKG-2h-xCx" id="oGz-xJ-fak"/>
                         <outlet property="psw_text_field_" destination="bM0-Yb-6eM" id="DCE-wY-VYj"/>
                         <outlet property="signup_button_" destination="Vbd-1Q-WoQ" id="k1s-E7-hIg"/>
+                        <outlet property="stack_view_" destination="fex-hT-lBF" id="26T-F1-g4X"/>
+                        <outlet property="stack_view_top_distance_" destination="zf4-cE-zBg" id="z6F-Of-kBW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
