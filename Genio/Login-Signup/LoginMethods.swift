@@ -37,7 +37,6 @@ extension LoginViewController {
         httpRequest(request: request) {
             (data, error, response) -> Void in
             if error != nil {
-                print(error)
                 DispatchQueue.main.async {
                     self.activity_indicator_.stopAnimating()
                     let alert = errorHandling(response: response)

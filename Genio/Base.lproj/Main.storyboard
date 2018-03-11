@@ -6,11 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Brandon_bld.otf">
+            <string>BrandonGrotesque-Bold</string>
+        </array>
         <array key="Brandon_reg.otf">
             <string>BrandonGrotesque-Regular</string>
         </array>
@@ -96,6 +100,7 @@
                                                         </variation>
                                                         <connections>
                                                             <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Mf-vx-ZhQ"/>
+                                                            <segue destination="P7H-nm-MTe" kind="show" id="NfH-Uz-fRZ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -152,6 +157,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iBP-rE-3CS"/>
                     <connections>
                         <outlet property="activity_indicator_" destination="120-fz-c1e" id="zyF-zS-ZPH"/>
                         <outlet property="email_text_field_" destination="Esr-SJ-NI0" id="5tF-KG-uEm"/>
@@ -170,7 +176,209 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="132.88043478260872"/>
+            <point key="canvasLocation" x="612" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c6K-3F-hr8">
+            <objects>
+                <viewController id="P7H-nm-MTe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qzQ-j5-aHx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fqJ-D1-yvd" userLabel="topStack_">
+                                <rect key="frame" x="37.5" y="40" width="300" height="333.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiG-fi-pdL">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Bold" family="Brandon Grotesque" pointSize="20"/>
+                                        <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Bold" family="Brandon Grotesque" pointSize="35"/>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-d9-XJp" userLabel="inputStack_">
+                                        <rect key="frame" x="0.0" y="31.5" width="300" height="302"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ePx-pI-cRH">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="54"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJK-kn-Ybn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="27"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                                        <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                        </variation>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cct-Wv-9yu">
+                                                        <rect key="frame" x="0.0" y="27" width="300" height="27"/>
+                                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-d2-yim">
+                                                <rect key="frame" x="0.0" y="62" width="300" height="54"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULLNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUY-4m-7TX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="27"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                                        <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                        </variation>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaw-Zt-c8Y">
+                                                        <rect key="frame" x="0.0" y="27" width="300" height="27"/>
+                                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oX4-Rl-YOp">
+                                                <rect key="frame" x="0.0" y="124" width="300" height="54"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWZ-1M-3GD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="27"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                                        <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                        </variation>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcQ-v5-Ml7">
+                                                        <rect key="frame" x="0.0" y="27" width="300" height="27"/>
+                                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vgt-Je-GdZ">
+                                                <rect key="frame" x="0.0" y="186" width="300" height="54"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyR-ES-FUD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="27"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                                        <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                        </variation>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5D-UD-dqB">
+                                                        <rect key="frame" x="0.0" y="27" width="300" height="27"/>
+                                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7zT-Ve-S9i">
+                                                <rect key="frame" x="0.0" y="248" width="300" height="54"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-td-xHf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="27"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                                        <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                        </variation>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ns4-gV-p3H">
+                                                        <rect key="frame" x="0.0" y="27" width="300" height="27"/>
+                                                        <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-Cq-qmh" userLabel="bottomStack_">
+                                <rect key="frame" x="37.5" y="610" width="300" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBb-GX-0Ma">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="37"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                        <state key="normal" title="CANCEL">
+                                            <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="W09-q7-0yU" kind="unwind" unwindAction="unwindToViewControllerWithSender:" id="mWF-y7-V9o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uc-jo-u6a">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="37"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                        <state key="normal" title="DONE">
+                                            <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w0Q-Xa-5sv" userLabel="middleStack_">
+                                <rect key="frame" x="37" y="403.5" width="300" height="105.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJS-G2-K8r">
+                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
+                                        <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btG-Oh-Jf4">
+                                        <rect key="frame" x="0.0" y="39" width="66.5" height="66.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="btG-Oh-Jf4" secondAttribute="height" multiplier="1:1" id="xZF-fg-TMN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="30"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fqJ-D1-yvd" firstAttribute="height" secondItem="qzQ-j5-aHx" secondAttribute="height" multiplier="0.5" id="52c-Oe-G7m"/>
+                            <constraint firstItem="btG-Oh-Jf4" firstAttribute="height" secondItem="fqJ-D1-yvd" secondAttribute="height" multiplier="0.2" id="70d-81-Ga4"/>
+                            <constraint firstItem="fqJ-D1-yvd" firstAttribute="top" secondItem="ihU-2g-Vyd" secondAttribute="top" constant="20" id="7qo-JG-awd"/>
+                            <constraint firstItem="w0Q-Xa-5sv" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="JRu-gQ-CYr"/>
+                            <constraint firstItem="fqJ-D1-yvd" firstAttribute="width" secondItem="qzQ-j5-aHx" secondAttribute="width" multiplier="0.8" id="PJm-1t-8Tn"/>
+                            <constraint firstItem="fqJ-D1-yvd" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="V1o-Ao-psy"/>
+                            <constraint firstItem="0lm-Cq-qmh" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="WKa-wK-ml5"/>
+                            <constraint firstItem="w0Q-Xa-5sv" firstAttribute="top" secondItem="fqJ-D1-yvd" secondAttribute="bottom" constant="30" id="XzR-oj-9Bv"/>
+                            <constraint firstItem="0lm-Cq-qmh" firstAttribute="width" secondItem="qzQ-j5-aHx" secondAttribute="width" multiplier="0.8" id="gBg-yg-RaU"/>
+                            <constraint firstItem="w0Q-Xa-5sv" firstAttribute="width" secondItem="fqJ-D1-yvd" secondAttribute="width" id="jFa-mK-juy"/>
+                            <constraint firstItem="ihU-2g-Vyd" firstAttribute="bottom" secondItem="0lm-Cq-qmh" secondAttribute="bottom" constant="20" id="lFI-ue-g73">
+                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ihU-2g-Vyd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cld-Po-5od"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cnk-OQ-61F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="W09-q7-0yU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="963"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fXQ-cH-oVA">
@@ -186,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSC-a8-vpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2646" y="131"/>
+            <point key="canvasLocation" x="3324" y="130.88455772113943"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qF2-8C-EdP">
@@ -204,7 +412,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5R-mL-Daq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868.79999999999995" y="132.23388305847078"/>
+            <point key="canvasLocation" x="1546.4000000000001" y="131.78410794602701"/>
         </scene>
         <!--Item-->
         <scene sceneID="Q3c-8H-coC">
@@ -223,10 +431,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ur-KH-gKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="131"/>
+            <point key="canvasLocation" x="2447.1999999999998" y="130.88455772113943"/>
         </scene>
     </scenes>
     <resources>
         <image name="Genio_Logo" width="612" height="792"/>
+        <image name="Profile" width="36" height="36"/>
     </resources>
 </document>

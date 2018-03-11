@@ -59,23 +59,37 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     func setupInputFields() {
         
         var height: CGFloat = self.view.bounds.height * 0.3
+        var radius : CGFloat = self.email_text_field_.bounds.height / 2
         if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.regular &&
             self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.regular) {
             self.stack_view_top_distance_.constant = 160
             self.main_stack_.spacing = 70
             height += 100
+            radius = ((height - stack_view_top_distance_.constant - (self.main_stack_.spacing * 2)) / 3) / 2
         }
+            
         self.email_text_field_.delegate = self
         self.email_text_field_.setLeftPaddingPoints(10)
         self.email_text_field_.setRightPaddingPoints(10)
-        self.email_text_field_.layer.cornerRadius =  ((height - stack_view_top_distance_.constant - (self.main_stack_.spacing * 2)) / 3) / 2
+        self.email_text_field_.layer.cornerRadius =  radius
         self.email_text_field_.layer.borderColor = UIColor.white.cgColor
         
         self.psw_text_field_.delegate = self
         self.psw_text_field_.setLeftPaddingPoints(10)
         self.psw_text_field_.setRightPaddingPoints(10)
-        self.psw_text_field_.layer.cornerRadius = ((height - stack_view_top_distance_.constant - (self.main_stack_.spacing * 2)) / 3) / 2
+        self.psw_text_field_.layer.cornerRadius = radius
         self.psw_text_field_.layer.borderColor = UIColor.white.cgColor
+        
+        print(self.email_text_field_.bounds.height)
+        print(self.view.bounds.height)
+        print(height)
+        print(radius)
+        print(self.stack_view_top_distance_.constant)
+        print(self.main_stack_.spacing)
+        
+        
+        
+        
         
         self.activity_indicator_.stopAnimating()
         self.activity_indicator_.hidesWhenStopped = true
@@ -89,9 +103,14 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     
     
     @IBAction func signupAction(_ sender: UIButton) {
+     
+        //self.performSegue(withIdentifier: "goToSignUp", sender: sender)
         print("sign up")
     }
     
+    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
+        
+    }
     
     
     /***************************************/
