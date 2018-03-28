@@ -27,9 +27,9 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var email_text_field_: UITextField!
     @IBOutlet weak var psw_text_field_: UITextField!
     @IBOutlet weak var main_stack_bottom_const_: NSLayoutConstraint!
-    @IBOutlet weak var main_stack_height_: NSLayoutConstraint!
+    @IBOutlet weak var stack_view_height_: NSLayoutConstraint!
     @IBOutlet weak var stack_view_: UIView!
-    @IBOutlet weak var stack_view_top_distance_: NSLayoutConstraint!
+    @IBOutlet weak var main_stack_height: NSLayoutConstraint!
     @IBOutlet weak var logo_top_const_: NSLayoutConstraint!
     
     
@@ -58,16 +58,9 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     }
     func setupInputFields() {
         
-        var height: CGFloat = self.view.bounds.height * 0.3
-        var radius : CGFloat = self.email_text_field_.bounds.height / 2
-        if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.regular &&
-            self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.regular) {
-            self.stack_view_top_distance_.constant = 160
-            self.main_stack_.spacing = 70
-            height += 100
-            radius = ((height - stack_view_top_distance_.constant - (self.main_stack_.spacing * 2)) / 3) / 2
-        }
-            
+        let height: CGFloat = self.view.bounds.height * 0.3 * 0.75
+        let radius : CGFloat = ((height - (self.main_stack_.spacing * 2)) / 3) / 2
+       
         self.email_text_field_.delegate = self
         self.email_text_field_.setLeftPaddingPoints(10)
         self.email_text_field_.setRightPaddingPoints(10)
@@ -82,15 +75,11 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
         
         print(self.email_text_field_.bounds.height)
         print(self.view.bounds.height)
+        print(UIScreen.main.bounds.height)
         print(height)
         print(radius)
-        print(self.stack_view_top_distance_.constant)
         print(self.main_stack_.spacing)
-        
-        
-        
-        
-        
+    
         self.activity_indicator_.stopAnimating()
         self.activity_indicator_.hidesWhenStopped = true
     }

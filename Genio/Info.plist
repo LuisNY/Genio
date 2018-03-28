@@ -49,5 +49,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allows you to add profile picture</string>
 </dict>
 </plist>
