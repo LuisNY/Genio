@@ -80,7 +80,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="34"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wtL-87-jxA"/>
@@ -93,10 +93,9 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="34"/>
                                                         </variation>
                                                         <connections>
-                                                            <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Mf-vx-ZhQ"/>
                                                             <segue destination="P7H-nm-MTe" kind="show" id="NfH-Uz-fRZ"/>
                                                         </connections>
                                                     </button>
@@ -199,7 +198,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cct-Wv-9yu">
                                                 <rect key="frame" x="0.0" y="30.5" width="300" height="30.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -209,6 +208,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                </variation>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -227,7 +229,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaw-Zt-c8Y">
                                                 <rect key="frame" x="0.0" y="30.5" width="300" height="30.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -237,6 +239,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                </variation>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -255,7 +260,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcQ-v5-Ml7">
                                                 <rect key="frame" x="0.0" y="31" width="300" height="30.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -265,6 +270,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                </variation>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -283,7 +291,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5D-UD-dqB">
                                                 <rect key="frame" x="0.0" y="30.5" width="300" height="30.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -293,6 +301,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                </variation>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -311,7 +322,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ns4-gV-p3H">
                                                 <rect key="frame" x="0.0" y="30.5" width="300" height="30.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.70588235290000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -321,94 +332,104 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                                </variation>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-Cq-qmh" userLabel="bottomStack_">
-                                <rect key="frame" x="37.5" y="610" width="300" height="37"/>
+                                <rect key="frame" x="37.5" y="606" width="300" height="41"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBb-GX-0Ma">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="37"/>
-                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="41"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
                                         <state key="normal" title="CANCEL">
                                             <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="34"/>
                                         </variation>
                                         <connections>
                                             <segue destination="W09-q7-0yU" kind="unwind" unwindAction="unwindToViewControllerWithSender:" id="mWF-y7-V9o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uc-jo-u6a">
-                                        <rect key="frame" x="150" y="0.0" width="150" height="37"/>
-                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                        <rect key="frame" x="150" y="0.0" width="150" height="41"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
                                         <state key="normal" title="DONE">
                                             <color key="titleColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="34"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="doneAction:" destination="P7H-nm-MTe" eventType="touchUpInside" id="9QG-FD-w9z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w0Q-Xa-5sv" userLabel="middleStack_">
-                                <rect key="frame" x="37" y="383.5" width="300" height="96.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJS-G2-K8r">
-                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="29"/>
-                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
-                                        <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
-                                        </variation>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btG-Oh-Jf4">
-                                        <rect key="frame" x="0.0" y="34" width="62.5" height="62.5"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="btG-Oh-Jf4" secondAttribute="height" multiplier="1:1" id="xZF-fg-TMN"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="3aU-pv-yO2" appends="YES" id="fgM-ng-W3H"/>
-                                        </connections>
-                                    </imageView>
-                                </subviews>
-                                <variation key="heightClass=regular-widthClass=regular" spacing="30"/>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btG-Oh-Jf4">
+                                <rect key="frame" x="140.5" y="433" width="94" height="94"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="btG-Oh-Jf4" secondAttribute="height" id="kiv-a6-wnu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Picture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJS-G2-K8r">
+                                <rect key="frame" x="94.5" y="383" width="187.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="92m-c0-Kob"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
+                                <color key="textColor" red="0.1333333333" green="0.47450980390000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="30"/>
+                                </variation>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hic-V3-3SZ">
+                                <rect key="frame" x="169.5" y="315.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="fqJ-D1-yvd" firstAttribute="height" secondItem="qzQ-j5-aHx" secondAttribute="height" multiplier="0.47" id="52c-Oe-G7m"/>
-                            <constraint firstItem="btG-Oh-Jf4" firstAttribute="height" secondItem="fqJ-D1-yvd" secondAttribute="height" multiplier="0.2" id="70d-81-Ga4"/>
                             <constraint firstItem="fqJ-D1-yvd" firstAttribute="top" secondItem="ihU-2g-Vyd" secondAttribute="top" constant="20" id="7qo-JG-awd"/>
-                            <constraint firstItem="w0Q-Xa-5sv" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="JRu-gQ-CYr"/>
+                            <constraint firstItem="btG-Oh-Jf4" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="PAJ-pY-yyf"/>
                             <constraint firstItem="fqJ-D1-yvd" firstAttribute="width" secondItem="qzQ-j5-aHx" secondAttribute="width" multiplier="0.8" id="PJm-1t-8Tn"/>
+                            <constraint firstItem="hic-V3-3SZ" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="PeZ-lS-gbF"/>
+                            <constraint firstItem="zJS-G2-K8r" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="TtN-KT-cdI"/>
                             <constraint firstItem="fqJ-D1-yvd" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="V1o-Ao-psy"/>
                             <constraint firstItem="0lm-Cq-qmh" firstAttribute="centerX" secondItem="qzQ-j5-aHx" secondAttribute="centerX" id="WKa-wK-ml5"/>
-                            <constraint firstItem="w0Q-Xa-5sv" firstAttribute="top" secondItem="fqJ-D1-yvd" secondAttribute="bottom" constant="30" id="XzR-oj-9Bv"/>
+                            <constraint firstItem="zJS-G2-K8r" firstAttribute="width" secondItem="qzQ-j5-aHx" secondAttribute="width" multiplier="0.5" id="dPT-y5-Hzo"/>
+                            <constraint firstItem="hic-V3-3SZ" firstAttribute="centerY" secondItem="qzQ-j5-aHx" secondAttribute="centerY" id="esU-Wv-xrp"/>
+                            <constraint firstItem="zJS-G2-K8r" firstAttribute="top" secondItem="fqJ-D1-yvd" secondAttribute="bottom" constant="30" id="fMZ-EI-fgH">
+                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                            </constraint>
                             <constraint firstItem="0lm-Cq-qmh" firstAttribute="width" secondItem="qzQ-j5-aHx" secondAttribute="width" multiplier="0.8" id="gBg-yg-RaU"/>
-                            <constraint firstItem="w0Q-Xa-5sv" firstAttribute="width" secondItem="fqJ-D1-yvd" secondAttribute="width" id="jFa-mK-juy"/>
                             <constraint firstItem="ihU-2g-Vyd" firstAttribute="bottom" secondItem="0lm-Cq-qmh" secondAttribute="bottom" constant="20" id="lFI-ue-g73">
                                 <variation key="heightClass=regular-widthClass=regular" constant="80"/>
                             </constraint>
+                            <constraint firstItem="btG-Oh-Jf4" firstAttribute="top" secondItem="zJS-G2-K8r" secondAttribute="bottom" constant="20" id="mpu-b3-n5N">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="btG-Oh-Jf4" firstAttribute="height" secondItem="fqJ-D1-yvd" secondAttribute="height" multiplier="0.3" id="mys-ca-Ac3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ihU-2g-Vyd"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="3aU-pv-yO2" appends="YES" id="C6n-xX-yjz"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="cld-Po-5od"/>
                     <connections>
+                        <outlet property="activity_indicator" destination="hic-V3-3SZ" id="I8m-RZ-uBy"/>
                         <outlet property="confirmpasswordTextField" destination="Ns4-gV-p3H" id="S2n-Sw-OEk"/>
                         <outlet property="emailTextField" destination="HcQ-v5-Ml7" id="1c1-fb-I5M"/>
                         <outlet property="fullnameTextField" destination="vaw-Zt-c8Y" id="X5j-zy-q1v"/>
                         <outlet property="passwordTextField" destination="y5D-UD-dqB" id="8Kx-26-Rtw"/>
                         <outlet property="photoImageView" destination="btG-Oh-Jf4" id="Vhw-Q6-P7l"/>
+                        <outlet property="profile_image_view_" destination="btG-Oh-Jf4" id="TMc-Ne-Tin"/>
                         <outlet property="top_stack_" destination="fqJ-D1-yvd" id="YPw-uT-TeD"/>
                         <outlet property="top_stack_height_" destination="52c-Oe-G7m" id="0Jt-w9-Pxu"/>
                         <outlet property="usernameTextField" destination="cct-Wv-9yu" id="Zwi-VS-uGO"/>
@@ -416,11 +437,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cnk-OQ-61F" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="W09-q7-0yU" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="3aU-pv-yO2">
-                    <connections>
-                        <action selector="selectimagefromlibraryGesture:" destination="P7H-nm-MTe" id="O0i-7b-llR"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="612" y="963"/>
         </scene>

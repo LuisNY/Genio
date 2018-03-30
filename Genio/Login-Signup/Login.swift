@@ -93,8 +93,6 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     
     @IBAction func signupAction(_ sender: UIButton) {
      
-        //self.performSegue(withIdentifier: "goToSignUp", sender: sender)
-        print("sign up")
     }
     
     @IBAction func unwindToViewController (sender: UIStoryboardSegue){
