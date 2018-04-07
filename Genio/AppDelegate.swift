@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().tintColor = UIColor(red: 34/255, green: 121/255, blue: 172/255, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor(red: 34/255, green: 121/255, blue: 172/255, alpha: 1.0)
-    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(red: 99/255, green: 180/255, blue: 243/255, alpha: 1.0)], for: .normal)
-    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(red: 34/255, green: 121/255, blue: 172/255, alpha: 1.0)], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(red: 99/255, green: 180/255, blue: 243/255, alpha: 1.0)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(red: 34/255, green: 121/255, blue: 172/255, alpha: 1.0)], for: .selected)
         
         return true
     }

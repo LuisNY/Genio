@@ -75,21 +75,16 @@ func signUpRequest(instertedUserName: String, insertedEmail: String, insertedPas
     let request = NSMutableURLRequest(url: NSURL(string: baseURL)! as URL)
     request.httpMethod = "POST"
     
-    
     let boundary = generateBoundaryString()
     request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
     request.addValue("multipart/form-data", forHTTPHeaderField: "Accept")
     
-    if (profileImage == nil)
-    {
+    if (profileImage == nil) {
         return nil
     }
-    
     let image_data = UIImagePNGRepresentation(profileImage!)
     
-    
-    if(image_data == nil)
-    {
+    if(image_data == nil) {
         return nil
     }
     

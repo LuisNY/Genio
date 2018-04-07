@@ -8,12 +8,11 @@
 
 import Foundation
 import UIKit
-
+/*****************************************************/
 extension UIImage {
     
     func maskWithColor(color: UIColor) -> UIImage? {
         let maskImage = cgImage!
-        
         let width = size.width
         let height = size.height
         let bounds = CGRect(x: 0, y: 0, width: width, height: height)
@@ -34,9 +33,42 @@ extension UIImage {
         }
     }
     
+    func resizeImage(image: UIImage, withSize: CGSize) -> UIImage {
+        
+        var actualHeight: CGFloat = image.size.height
+        var actualWidth: CGFloat = image.size.width
+        let maxHeight: CGFloat = withSize.width
+        let maxWidth: CGFloat = withSize.height
+        var imgRatio: CGFloat = actualWidth/actualHeight
+        let maxRatio: CGFloat = maxWidth/maxHeight
+        let compressionQuality = 0.5
+        if (actualHeight > maxHeight || actualWidth > maxWidth) {
+            if(imgRatio < maxRatio) {
+                //adjust width according to maxHeight
+                imgRatio = maxHeight / actualHeight
+                actualWidth = imgRatio * actualWidth
+                actualHeight = maxHeight
+            } else if(imgRatio > maxRatio) {
+                //adjust height according to maxWidth
+                imgRatio = maxWidth / actualWidth
+                actualHeight = imgRatio * actualHeight
+                actualWidth = maxWidth
+            } else {
+                actualHeight = maxHeight
+                actualWidth = maxWidth
+            }
+        }
+        let rect: CGRect = CGRect(x: 0.0, y: 0.0, width: actualWidth, height: actualHeight)
+        UIGraphicsBeginImageContext(rect.size)
+        image.draw(in: rect)
+        let image: UIImage  = UIGraphicsGetImageFromCurrentImageContext()!
+        let imageData = UIImageJPEGRepresentation(image, CGFloat(compressionQuality))
+        UIGraphicsEndImageContext()
+        let resizedImage = UIImage(data: imageData!)
+        return resizedImage!
+    }
 }
-
-
+/*****************************************************/
 
 extension UITextField {
     func setLeftPaddingPoints(_ amount:CGFloat){
@@ -50,6 +82,7 @@ extension UITextField {
         self.rightViewMode = .always
     }
 }
+/*****************************************************/
 
 extension NSMutableAttributedString {
     func bold(_ text:String) -> NSMutableAttributedString {
@@ -65,6 +98,7 @@ extension NSMutableAttributedString {
         return self
     }
 }
+/*****************************************************/
 
 extension UIDevice {
     var iPhoneX: Bool {
@@ -98,6 +132,7 @@ extension UIDevice {
         }
     }
 }
+/*****************************************************/
 
 extension UserDefaults {
     func set(_ color: UIColor, forKey key: String) {
@@ -108,4 +143,10 @@ extension UserDefaults {
         return NSKeyedUnarchiver.unarchiveObject(with: data) as? UIColor
     }
 }
+
+
+
+
+
+
 

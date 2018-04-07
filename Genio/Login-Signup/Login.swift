@@ -58,8 +58,22 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     }
     func setupInputFields() {
         
-        let height: CGFloat = self.view.bounds.height * 0.3 * 0.75
-        let radius : CGFloat = ((height - (self.main_stack_.spacing * 2)) / 3) / 2
+        
+        
+        print("original height=", self.view.bounds.height)
+        var height: CGFloat = self.view.bounds.height * 0.3
+        print("original height*0.3=", height)
+        height = height  * 0.75
+        print("original height*0.3*0.75=", height)
+        
+        print("spacing=", self.main_stack_.spacing)
+        
+        var radius : CGFloat = (height - (self.main_stack_.spacing * 2))
+        print("(height*0.3*0.75)-(spacing*2)=", radius)
+        radius = (radius / 3)
+        print("((height*0.3*0.75)-(spacing*2))/3=", radius)
+        radius = radius / 2
+        print("((height*0.3*0.75)-(spacing*2))/3/2", radius)
        
         self.email_text_field_.delegate = self
         self.email_text_field_.setLeftPaddingPoints(10)
@@ -73,13 +87,7 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
         self.psw_text_field_.layer.cornerRadius = radius
         self.psw_text_field_.layer.borderColor = UIColor.white.cgColor
         
-        print(self.email_text_field_.bounds.height)
-        print(self.view.bounds.height)
-        print(UIScreen.main.bounds.height)
-        print(height)
-        print(radius)
-        print(self.main_stack_.spacing)
-    
+        
         self.activity_indicator_.stopAnimating()
         self.activity_indicator_.hidesWhenStopped = true
     }

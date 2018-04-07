@@ -28,14 +28,14 @@ extension SignupViewController {
             self.profile_image_view_.gestureRecognizers?.removeAll()
         }
         
-        var baseURL = UserDefaults.standard.string(forKey: "myURL")!
-        baseURL = baseURL + "register/exists/" + insertedUserName
+        var url_username = UserDefaults.standard.string(forKey: "myURL")!
+        url_username = url_username + "register/exists/" + insertedUserName
         
-        let request = NSMutableURLRequest(url: NSURL(string: baseURL)! as URL)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
+        let username_request = NSMutableURLRequest(url: NSURL(string: url_username)! as URL)
+        username_request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        username_request.httpMethod = "GET"
         
-        httpRequest(request: request) {
+        httpRequest(request: username_request) {
             (data, error, response) -> Void in
             if error != nil {
                 DispatchQueue.main.async {
@@ -44,28 +44,26 @@ extension SignupViewController {
                     self.repristinateView()
                 }
             } else {
-                var jsonObject: Dictionary<String, AnyObject>?
                 
+                var jsonObject: Dictionary<String, AnyObject>?
                 do {
                     jsonObject = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? Dictionary<String,AnyObject>
                 } catch {
                     DispatchQueue.main.async {
                         self.repristinateView()
-                        let alert = createAlert(title: "Sign Up Error", message: "An error occurred")
-                        self.present(alert, animated: true, completion: nil)
+                        self.showAlert(message: "An error occurred", title: "Signup Error")
                     }
                 }
-                
-                if let message = jsonObject?["message"] as? String {
-                    if message == "NOT_PRESENT" {   //user name is good
-                        var baseURL2 = UserDefaults.standard.string(forKey: "myURL")!
-                        baseURL2 = baseURL2 + "register/exists/" + insertedEmail
+                if let username_message = jsonObject?["message"] as? String {
+                    if username_message == "NOT_PRESENT" {   //user name is good
+                        var url_email = UserDefaults.standard.string(forKey: "myURL")!
+                        url_email = url_email + "register/exists/" + insertedEmail
                         
-                        let request2 = NSMutableURLRequest(url: NSURL(string: baseURL2)! as URL)
-                        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-                        request.httpMethod = "GET"
+                        let email_request = NSMutableURLRequest(url: NSURL(string: url_email)! as URL)
+                        email_request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                        email_request.httpMethod = "GET"
                         
-                        httpRequest(request: request2) {
+                        httpRequest(request: email_request) {
                             (data, error, response) -> Void in
                             
                             if error == nil {
@@ -76,27 +74,31 @@ extension SignupViewController {
                                 } catch {
                                     DispatchQueue.main.async {
                                         self.repristinateView()
-                                        let alert = createAlert(title: "Sign Up Error", message: "An error occurred")
-                                        self.present(alert, animated: true, completion: nil)
+                                        self.showAlert(message: "An error occurred", title: "Signup Error")
                                     }
                                 }
-                                
-                                if let message2 = jsonObject2?["message"] as? String {
-                                    if message2 == "NOT_PRESENT" {  // email is good
+                                if let email_message = jsonObject2?["message"] as? String {
+                                    
+                                    if email_message == "NOT_PRESENT" {  // email is good
                                         
                                         let validEmail = isValidEmail(testStr: insertedEmail)
                                         let lengthPsw = isPswLenth(password: insertedPassword)
                                         let validPsw = isPswSame(password: insertedPassword, confirmPassword: confirmationPassword)
-                                        if validEmail && lengthPsw && validPsw {
+                                        
+                                        if validEmail && lengthPsw && validPsw { //all arguments are good
                                             
                                             let fbID = UserDefaults.standard.string(forKey: "fbID")
+                                            
+                                            var signup_request : NSMutableURLRequest?
                                             DispatchQueue.main.async {
-                                                guard signUpRequest(instertedUserName: insertedUserName, insertedEmail: insertedEmail, insertedPassword: insertedPassword, insertedFullName: insertedFullName, profileImage: self.profile_image_view_.image, facebookID: fbID, iOSDeviceToken: nil) != nil else {
-                                                    return
-                                                }
+                                                 signup_request = signUpRequest(instertedUserName: insertedUserName, insertedEmail: insertedEmail, insertedPassword: insertedPassword, insertedFullName: insertedFullName, profileImage: self.profile_image_view_.image, facebookID: fbID, iOSDeviceToken: nil)
+                                            }
+                                            if signup_request == nil {
+                                                self.showAlert(message: "An error occurred", title: "Signup Error")
+                                                return
                                             }
                                             
-                                            httpRequest(request: request){
+                                            httpRequest(request: signup_request){
                                                 (data, error, response) -> Void in
                                                 
                                                 let httpResponse = response as? HTTPURLResponse
@@ -109,8 +111,7 @@ extension SignupViewController {
                                                 } catch {
                                                     DispatchQueue.main.async {
                                                         self.repristinateView()
-                                                        let alert = createAlert(title: "Sign Up Error", message: "An error occurred")
-                                                        self.present(alert, animated: true, completion: nil)
+                                                        self.showAlert(message: "An error occurred", title: "Signup Error")
                                                     }
                                                 }
                                                 
@@ -120,57 +121,47 @@ extension SignupViewController {
                                                     self.present(alert, animated: true, completion: nil)
                                                 } else {
                                                     DispatchQueue.main.async {
-                                                        let alert = createAlert(title: "Complete Sign Up", message: "Please check your email and follow instructions to complete your registration")
-                                                        self.present(alert, animated: true, completion: nil)
+                                                        self.showAlert(message: "Please check your email and follow instructions to complete your registration", title: "Complete Sign Up")
                                                     }
                                                 }
                                             }
                                         } else {
                                             
-                                            if insertedPassword == "" || insertedEmail == "" || insertedUserName == ""{
-                                                
-                                                let alert = createAlert(title: "Sign Up Error", message: "Please enter UserName, Email and Password")
-                                                self.present(alert, animated: true, completion: nil)
-                                            } else if validEmail == false {
-                                                
-                                                let alert = createAlert(title: "Sign Up Error", message: "Please enter a valid Email address")
-                                                self.present(alert, animated: true, completion: nil)
-                                            } else if lengthPsw == false {
-                                                
-                                                let alert = createAlert(title: "Sign Up Error", message: "Password must have at least 8 carachters")
-                                                self.present(alert, animated: true, completion: nil)
-                                            } else {
-                                                
-                                                let alert = createAlert(title: "Sign Up Error", message: "Wrong confirmation Password")
-                                                self.present(alert, animated: true, completion: nil)
-                                            }
-                                            
-                                            self.repristinateView()
                                             let tapProfilePic: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.selectProfilePic))
+                                            
                                             DispatchQueue.main.async {
+                                                if insertedPassword == "" || insertedEmail == "" || insertedUserName == "" {
+                                                    self.showAlert(message: "Please enter UserName, Email and Password", title: "Signup Error")
+                                                } else if validEmail == false {
+                                                    self.showAlert(message: "Please enter a valid Email address", title: "Signup Error")
+                                                } else if lengthPsw == false {
+                                                    self.showAlert(message: "Password must have at least 8 carachters", title: "Signup Error")
+                                                } else {
+                                                    self.showAlert(message: "Wrong confirmation Password", title: "Signup Error")
+                                                }
+                                                self.repristinateView()
                                                 self.profile_image_view_.addGestureRecognizer(tapProfilePic)
                                             }
                                         }
                                     } else {
                                         
-                                        self.repristinateView()
                                         let tapProfilePic: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.selectProfilePic))
                                         DispatchQueue.main.async {
+                                            self.repristinateView()
                                             self.profile_image_view_.addGestureRecognizer(tapProfilePic)
-                                            let alert = createAlert(title: "Error", message: "Your Email already exists")
-                                            self.present(alert, animated: true, completion: nil)
+                                            self.showAlert(message: "Your Email already exists", title: "Error")
                                         }
                                     }
                                 }
                             }
                         }
                     } else {
-                        self.repristinateView()
+                        
                         let tapProfilePic: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.selectProfilePic))
                         DispatchQueue.main.async {
+                            self.repristinateView()
                             self.profile_image_view_.addGestureRecognizer(tapProfilePic)
-                            let alert = createAlert(title: "Error", message: "Your Username already exists")
-                            self.present(alert, animated: true, completion: nil)
+                            self.showAlert(message: "Your Username already exists", title: "Error")
                         }
                     }
                 }
@@ -178,22 +169,28 @@ extension SignupViewController {
         }
     }
     
+    
     /********************************************************************************/
+    
+    func showAlert(message: String, title: String = "Signup Error") {
+        self.activity_indicator.stopAnimating()
+        let alert = createAlert(title: title, message: message)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    /********************************************************************************/
+    
     func repristinateView(){
-        DispatchQueue.main.async {
             self.emailTextField.isEnabled = true
             self.fullnameTextField.isEnabled = true
             self.usernameTextField.isEnabled = true
             self.passwordTextField.isEnabled = true
             self.confirmpasswordTextField.isEnabled = true
             self.activity_indicator.stopAnimating()
-        }
     }
-    /********************************************************************************/
-        
-    //#MARK: Actions
     
     /********************************************************************************/
+
     @objc func selectProfilePic() {
         
         let actionController = UIAlertController(title: "Photo", message: nil, preferredStyle: .actionSheet)
@@ -205,13 +202,15 @@ extension SignupViewController {
         actionController.addAction(cameraAction)
         actionController.addAction(cancelAction)
         
+        actionController.popoverPresentationController?.sourceView = self.profile_image_view_
+        
         DispatchQueue.main.async {
             self.present(actionController, animated: true, completion: nil)
         }
     }
+
     /********************************************************************************/
-    
-    /********************************************************************************/
+
     func accessLibrary() {
         
         let picker = UIImagePickerController()
@@ -223,10 +222,9 @@ extension SignupViewController {
             self.present(picker, animated: true, completion: nil)
         }
     }
-    /********************************************************************************/
-    
     
     /********************************************************************************/
+    
     func accessCamera() {
         
         let picker = UIImagePickerController()
@@ -240,4 +238,41 @@ extension SignupViewController {
     }
     /********************************************************************************/
 
+    
+    @objc internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        var chosen_image : UIImage?
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            chosen_image = editedImage
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            chosen_image = originalImage
+        }
+        
+        if (chosen_image != nil) {
+            
+            var height = chosen_image!.size.height
+            var width = chosen_image!.size.width
+            while (width * height > 90000) {
+                width *= 0.8
+                height *= 0.8
+            }
+            let resized_image = chosen_image!.resizeImage(image: chosen_image!, withSize: CGSize(width: width, height: height))
+            
+            DispatchQueue.main.async {
+                self.profile_image_view_.image = resized_image
+                self.profile_image_view_.layer.borderWidth = 1
+                self.profile_image_view_.layer.masksToBounds = false
+                self.profile_image_view_.layer.borderColor = UIColor.white.cgColor
+                self.profile_image_view_.layer.cornerRadius = self.profile_image_view_.frame.height/2
+                self.profile_image_view_.clipsToBounds = true
+                self.profile_image_view_.contentMode = .scaleAspectFill
+            }
+        }
+        DispatchQueue.main.async {
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    /********************************************************************************/
+    
 }
