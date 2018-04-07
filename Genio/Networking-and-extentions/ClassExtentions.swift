@@ -113,7 +113,7 @@ extension UIDevice {
         case iPhones6_7_8 = "iPhone 6, iPhone 6S, iPhone 7 or iPhone 8"
         case iPhones6_7_8Plus = "iPhone 6 Plus, iPhone 6S Plus, iPhone 7 Plus or iPhone 8 Plus"
         case iPhoneX = "iPhone X"
-        case unknown
+        case unknown = "unknown"
     }
     var screenType: ScreenType {
         switch UIScreen.main.nativeBounds.height {
@@ -131,6 +131,26 @@ extension UIDevice {
             return .unknown
         }
     }
+    
+    func getDeviceType() -> ScreenType {
+        
+        switch UIScreen.main.nativeBounds.height {
+            case 960:
+                return .iPhone4
+            case 1136:
+                return .iPhones5
+            case 1334:
+                return .iPhones6_7_8
+            case 1920, 2208:
+                return .iPhones6_7_8Plus
+            case 2436:
+                return .iPhoneX
+            default:
+                return .unknown
+            }
+        
+    }
+    
 }
 /*****************************************************/
 

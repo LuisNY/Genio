@@ -17,8 +17,12 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     let text_color_ = UserDefaults.standard.color(forKey: "textColor")
     var token = String()
     var original_stack_bottom_const_ : CGFloat = 0.0
+    var original_logo_top_const_ : CGFloat = 0.0
+    var dist_from_top_ : CGFloat = 0.0
     
     //#MARK: Coupling Variables
+    @IBOutlet weak var main_stack_bottom_stack_dist_: NSLayoutConstraint!
+    @IBOutlet weak var bottom_stack_view_: UIStackView!
     @IBOutlet weak var signup_button_: UIButton!
     @IBOutlet weak var login_button_: UIButton!
     @IBOutlet weak var activity_indicator_: UIActivityIndicatorView!
@@ -26,7 +30,7 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var logo_: UIImageView!
     @IBOutlet weak var email_text_field_: UITextField!
     @IBOutlet weak var psw_text_field_: UITextField!
-    @IBOutlet weak var main_stack_bottom_const_: NSLayoutConstraint!
+    @IBOutlet weak var bottom_stack_bottom_const_: NSLayoutConstraint!
     @IBOutlet weak var stack_view_height_: NSLayoutConstraint!
     @IBOutlet weak var stack_view_: UIView!
     @IBOutlet weak var main_stack_height: NSLayoutConstraint!
@@ -35,9 +39,24 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        switch UIDevice.current.getDeviceType() {
+            case .iPhone4:
+                self.dist_from_top_ = 0
+            case .iPhones5:
+                self.dist_from_top_ = 0
+            case .iPhones6_7_8:
+                self.dist_from_top_ = 0
+            case .iPhones6_7_8Plus:
+                self.dist_from_top_ = 0
+            case .iPhoneX:
+                self.dist_from_top_ = 20
+            default:
+                self.dist_from_top_ = 100
+        }
+        
         self.view.backgroundColor = labels_color_
         self.stack_view_.backgroundColor = labels_color_
-        
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: text_color_!], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: labels_color_!], for: .selected)
         
@@ -58,23 +77,11 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
     }
     func setupInputFields() {
         
+        var height: CGFloat = self.view.bounds.height * 0.18
+        height = height  * 0.7
         
+        let radius : CGFloat = (height - (self.main_stack_.spacing)) / 4
         
-        print("original height=", self.view.bounds.height)
-        var height: CGFloat = self.view.bounds.height * 0.3
-        print("original height*0.3=", height)
-        height = height  * 0.75
-        print("original height*0.3*0.75=", height)
-        
-        print("spacing=", self.main_stack_.spacing)
-        
-        var radius : CGFloat = (height - (self.main_stack_.spacing * 2))
-        print("(height*0.3*0.75)-(spacing*2)=", radius)
-        radius = (radius / 3)
-        print("((height*0.3*0.75)-(spacing*2))/3=", radius)
-        radius = radius / 2
-        print("((height*0.3*0.75)-(spacing*2))/3/2", radius)
-       
         self.email_text_field_.delegate = self
         self.email_text_field_.setLeftPaddingPoints(10)
         self.email_text_field_.setRightPaddingPoints(10)
@@ -87,7 +94,6 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
         self.psw_text_field_.layer.cornerRadius = radius
         self.psw_text_field_.layer.borderColor = UIColor.white.cgColor
         
-        
         self.activity_indicator_.stopAnimating()
         self.activity_indicator_.hidesWhenStopped = true
     }
@@ -98,30 +104,33 @@ class LoginViewController : UIViewController, UITextFieldDelegate, UIImagePicker
         checkEmailAndPsw(sender: sender)
     }
     
-    
-    @IBAction func signupAction(_ sender: UIButton) {
-     
-    }
-    
     @IBAction func unwindToViewController (sender: UIStoryboardSegue){
         
     }
-    
     
     /***************************************/
     
     //MARK: Textfield actions/graphics
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.original_stack_bottom_const_ = self.main_stack_bottom_const_.constant
+        self.original_stack_bottom_const_ = self.bottom_stack_bottom_const_.constant
+        self.original_logo_top_const_ = self.logo_top_const_.constant
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: [.curveLinear], animations: {
-            self.main_stack_bottom_const_.constant = (self.view.bounds.height - self.logo_top_const_.constant - self.view.safeAreaInsets.top - self.stack_view_.bounds.height)
+            print(self.view.bounds.height)
+            print(self.logo_top_const_.constant)
+            print(self.view.safeAreaInsets.top)
+            print(self.stack_view_.bounds.height)
+            self.bottom_stack_bottom_const_.constant = self.view.bounds.height - self.view.safeAreaInsets.top - self.stack_view_.bounds.height - self.bottom_stack_view_.bounds.height - self.main_stack_bottom_stack_dist_.constant - self.dist_from_top_
+            print(self.bottom_stack_bottom_const_.constant)
+            
+            self.logo_top_const_.constant = -700
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 0.3, delay: 0.0, options: [.curveLinear], animations: {
-            self.main_stack_bottom_const_.constant = self.original_stack_bottom_const_
+            self.bottom_stack_bottom_const_.constant = self.original_stack_bottom_const_
+            self.logo_top_const_.constant = self.original_logo_top_const_
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
